@@ -7,7 +7,7 @@ export default function UseCallBack() {
 
   const onClick = useCallback(() => {
     console.log("onclick fn. called");
-  }, []);
+  }, []); //won't re-define the function until something in the dependency array changes
 
   return (
     <div
