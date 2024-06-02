@@ -1,17 +1,11 @@
-function useCustomHook(): string {
-  return "Hello World";
-}
-
-function CardWrapper({ children }: { children: React.ReactNode }): JSX.Element {
-  console.log("children:", children);
-  return (
-    <div style={{ border: "2px solid black", padding: 20 }}>{children}</div>
-  );
-}
+import CardWrapper from "./CardWrapper";
+import useCustomHook from "./CustomHook";
 
 export default function Test(): JSX.Element {
+  const data: string = useCustomHook();
   return (
     <div>
+      {data}
       <CardWrapper>Hello</CardWrapper>
     </div>
   );
