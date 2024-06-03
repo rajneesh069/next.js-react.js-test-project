@@ -9,4 +9,6 @@
 #### value = useMemo(), function = useCallback()
 
 5. `memo` is NOT a hook. `useMemo` is a hook! `memo` is used to memoize the whole child component and it will only re-render if the input parameters of it change, while `useMemo` hook is used to memoize a function and returns a function and it basically tells React to NOT re-define it on every re-render until something in the dependancy array changes, so un-necessary referential inequality could be avoided in case of functions.
-6. `useRef` hook is used to overwrite the changes in DOM done by React. Changing a ref does not trigger a re-render.
+6. `useRef` hook is used to overwrite the changes in DOM done by React. 
+Changing a ref does not trigger a re-render. 
+We can persist a value across re-renders and get it by using the `.current` property of that object given by `useRef()` hook.
